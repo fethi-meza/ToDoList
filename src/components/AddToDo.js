@@ -1,13 +1,28 @@
 import React from 'react'
-import { VStack,  } from "@chakra-ui/react";
+import { HStack,Input ,Button } from "@chakra-ui/react";
 
 
-const AddToDo = () => {
+const AddToDo = (e) => {
+  
+  function handleSubmit(params) {
+    
+  }
+  
+  
   return (
-    <VStack>
+   <form onSubmit={handleSubmit}>
 
-      
-    </VStack>
+<HStack mt="8">
+
+  <Input variant={"filled"} placeholder='add to new app' />
+  <Button  bgColor={"teal.200"} border={"1px"}  borderRadius={"8px"} variant="solid" px={'8'} type="submit">
+    Add to new 
+  </Button>
+
+  </HStack>
+
+
+   </form>
   )
 }
 
